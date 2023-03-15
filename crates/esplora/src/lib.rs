@@ -14,6 +14,8 @@ mod async_ext;
 #[cfg(feature = "async")]
 pub use async_ext::*;
 
+// this is to avoid warnings when no feature flags are enabled
+#[allow(dead_code)]
 pub(crate) fn map_confirmation_time(
     tx_status: &TxStatus,
     height_at_start: u32,
